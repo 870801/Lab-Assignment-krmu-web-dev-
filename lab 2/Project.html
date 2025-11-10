@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 1 - External CSS Styling</title>
+  <style>:root {
+  --primary-color: #31e57f;
+  --secondary-color: #00ad62;
+  --text-color: #222;
+  --background-color: #f5f7fa;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+nav {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 10px;
+  position: sticky; 
+  top: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 700;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.section-box {
+  
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+.section-box p {
+  margin: 10px 0;
+  padding: 5px;
+}
+#skills {
+  border-color: var(--primary-color);
+}
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0aca5d;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+}
+#back-to-top:hover {
+  background-color: #00347a;
+}
+hr {
+  border: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  margin: 40px 0;
+}
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.one {
+  text-align: center;
+}
+
+#contact label {
+    display: block;
+    margin-top: 10px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #cd7a1c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  background-color: white;
+}</style>
+
+  
+  <link rel="stylesheet" href="style.css">
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+  <header>
+    <h1>My Portfolio</h1>
+   
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#Projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="intro" class="section-box">
+    <h2 class="one">About</h2>
+    <div class="image-container"><img src="/vishalpic.jpeg" height="100"></div>
+    <p>This webpage demonstrates how to apply an external CSS stylesheet to an HTML file. It includes element, class, and ID selectors, a consistent color theme, custom typography, and CSS positioning techniques such as relative, absolute, static, and fixed positioning.</p>
+  </section>
+
+  <hr>
+
+  <section id="skills" class="section-box">
+    <h2 class="one">My Skills </h2>
+    <table>
+      <tr>
+        <th>Technology</th>
+        <th>Skill Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>Pending</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <section id="Projects" class="section-box">
+    <h2 class="one">Projects</h2>
+    <div class="three"><p>Project 1 = </p>
+    My simple html and css page</div>
+    <br>
+
+    <div class="three"><p>Project 2 =</p>
+     clone website</div>
+  </section>
+  <hr>
+
+  <section id="contact" class="section-box">
+  
+    <h2 class="one">Contact Me</h2>
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td><label for="name">Name</label></td>
+          <td> <input type="text" id="name" name="name" placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+        </tr>
+        <tr>
+          <td><label for="message">Message:</label></td>
+          <td><textarea id="message" name="message" placeholder="Your message here"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button type="submit">Send</button></td>
+        </tr>
+      </table>
+    </form>
+    
+    
+  </section>
+
+  
